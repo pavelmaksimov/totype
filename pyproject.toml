@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "totype"
+version = "0.1.0"
+description = "Data converter"
+authors = ["Pavel Maksimov <vur21@ya.ru>"]
+keywords = ["python", "data-converter", "data-transform"]
+license = "Apache-2.0"
+homepage = "https://github.com/pavelmaksimov/totype"
+include = [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+]
+packages = [
+    { include = "totype" },
+]
+readme = "README.md"
+repository = "https://github.com/pavelmaksimov/totype.git"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+orjson = {version = "*", optional = true}
+pendulum = {version = "*", optional = true}
+ujson = {version = "*", optional = true}
+simplejson = {version = "*", optional = true}
+dateutils = {version = "*", optional = true}
+
+
+[tool.poetry.dev-dependencies]
+pytz = "*"
+black = "^21.10b0"
+coverage = "*"
+flake8 = "*"
+mccabe = "*"
+mypy = "*"
+pytest = "*"
+pylint = "*"
+tox = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
